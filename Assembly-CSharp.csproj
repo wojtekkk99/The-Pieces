@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
      <Compile Include="Assets\Scripts\Hearts.cs" />
+     <Compile Include="Assets\Scripts\MovingPlaform.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SpikesDetect.cs" />
  <Reference Include="Unity.Timeline.Editor">
