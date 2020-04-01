@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\Hearts.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\SpikesDetect.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Projects/The  Pieces/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
