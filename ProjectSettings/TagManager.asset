@@ -7,6 +7,8 @@ TagManager:
   - Spikes
   - Checkpoint
   - Ground
+  - Moving Platform
+  - Collected
   layers:
   - Default
   - TransparentFX
