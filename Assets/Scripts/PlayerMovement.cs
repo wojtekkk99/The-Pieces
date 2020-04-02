@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+	public string gender = "XY";
 	public CharacterController2D controller;
 	public float distToGround;
 	public float runSpeed = 40f;
-	GameObject ground;
 
 	float horizontalMove = 0f;
 	bool jump = false;

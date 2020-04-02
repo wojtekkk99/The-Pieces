@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerCollect : MonoBehaviour
 {
     public TextMeshProUGUI text;
-    int score;
+    public int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +21,10 @@ public class PlayerCollect : MonoBehaviour
             score += 1;
             text.text = "X " + score;
         }
+    }
+
+    public void uploadGui()
+    {
+        text.text = "X " + score;
     }
 }
