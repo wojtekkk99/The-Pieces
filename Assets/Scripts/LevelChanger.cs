@@ -5,9 +5,9 @@ public class LevelChanger : MonoBehaviour
 {
     int sceneToLoad;
     public Animator animator;
-    public void FadeToNextLevel()
+    public void FadeToNextLevel(int scene)
     {
-        sceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        sceneToLoad = scene;
         animator.SetTrigger("FadeOut");
     }
 

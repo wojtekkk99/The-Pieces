@@ -12,9 +12,13 @@ public class PlayerMovement : MonoBehaviour
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool isGrounded = true;
+	Rigidbody2D rgd;
+	public GameObject animator;
+	public bool IsFreeze = false;
 	void Start()
 	{
-	
+		rgd = GetComponent<Rigidbody2D>();
+		animator.gameObject.SetActive(false);
 	}
 
 	// Update is called once per frame
@@ -26,6 +30,14 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKeyDown("w") && isGrounded)
 		{
 			jump = true;
+		}
+
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			animator.SetActive(true);
+			animator.GetComponent<Animator>().Play("ShowPause");
+			rgd.constraints = RigidbodyConstraints2D.FreezePosition;
+			IsFreeze = true;
 		}
 
 	}

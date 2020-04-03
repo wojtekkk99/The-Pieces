@@ -40,5 +40,6 @@ public class Hearts : MonoBehaviour
     public void Die()
     {
         rigid.constraints = RigidbodyConstraints2D.FreezePosition;
+        GetComponent<PlayerMovement>().IsFreeze = true;
     }
 }
