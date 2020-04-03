@@ -11,11 +11,13 @@ public class PlayerMovement : MonoBehaviour
 
 	float horizontalMove = 0f;
 	bool jump = false;
-	bool isGrounded = true;
+	public bool isGrounded = true;
 	Rigidbody2D rgd;
 	public GameObject animator;
 	public bool IsFreeze = false;
 	public GameObject gameOver;
+	public bool IsPaused = false;
+	public GameObject pauseScreen;
 	void Start()
 	{
 		rgd = GetComponent<Rigidbody2D>();
@@ -34,14 +36,18 @@ public class PlayerMovement : MonoBehaviour
 			jump = true;
 		}
 
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) && IsPaused == false)
 		{
 			animator.SetActive(true);
 			animator.GetComponent<Animator>().Play("ShowPause");
 			rgd.constraints = RigidbodyConstraints2D.FreezePosition;
 			IsFreeze = true;
 		}
-
+		if(Input.GetKey(KeyCode.Escape) && IsPaused == true)
+		{
+			IsPaused = false;
+			pauseScreen.GetComponent<ButtonsActions>().resumePressed();
+		}
 	}
 
 	void FixedUpdate()

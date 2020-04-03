@@ -10,13 +10,14 @@ public class ButtonsActions : MonoBehaviour
     public LevelChanger change;
     public void resumePressed()
     {
+        player.IsPaused = false;
         animator.SetTrigger("ResumeGame");
     }
 
     public void afterResume()
     {
-        animator.gameObject.SetActive(false);
         player.IsFreeze = false;
+        animator.gameObject.SetActive(false);
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
     }
@@ -31,5 +32,9 @@ public class ButtonsActions : MonoBehaviour
     {
         animator.SetTrigger("ResumeGame");
         change.GetComponent<LevelChanger>().FadeToNextLevel(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void setPause()
+    {
+        player.IsPaused = true;
     }
 }

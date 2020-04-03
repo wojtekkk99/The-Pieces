@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 186944289}
   - component: {fileID: 186944288}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HealthAndScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -836,9 +836,12 @@ MonoBehaviour:
   controller: {fileID: 429909556}
   distToGround: 0
   runSpeed: 40
+  isGrounded: 1
   animator: {fileID: 8545859062491766100}
   IsFreeze: 0
   gameOver: {fileID: 1637426994}
+  IsPaused: 0
+  pauseScreen: {fileID: 8545859062491766100}
 --- !u!58 &429909551
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -852,9 +855,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5580352}
+  m_Offset: {x: 0, y: -0.62477124}
   serializedVersion: 2
-  m_Radius: 0.5352423
+  m_Radius: 0.60197824
 --- !u!61 &429909552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1032,7 +1035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   other: {fileID: 34005603}
   hearts: {fileID: 429909557}
-  sprite: {fileID: 21300000, guid: 6a7aa3a0f50d52e419bc41f504da2945, type: 3}
+  sprite: {fileID: 21300000, guid: 07f9b5c93597dd34280648e238c9fde6, type: 3}
 --- !u!1001 &440741905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1474,7 +1477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 85ef9dffb8feb2f4099fea8caa68a6c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68846e116e1ab38408b945747f5673ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2779,6 +2782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1103a3d19779dc2498138b605224bb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Heart: {fileID: 429909549}
 --- !u!4 &1689348170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5320513915446914184, guid: ba3c7e976718bad458594cf36e89d038,
@@ -3432,7 +3436,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b983b9f0eb0830d4893f30f791ecf6d8,
+      objectReference: {fileID: 21300000, guid: 68846e116e1ab38408b945747f5673ad,
         type: 3}
     - target: {fileID: 8222686388658371889, guid: 0bc56c2b368f0a84ebde85f7a35a7a09,
         type: 3}

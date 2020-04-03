@@ -40,7 +40,6 @@ public class Hearts : MonoBehaviour
     
     public void Die()
     {
-        health = 3;
         rigid.constraints = RigidbodyConstraints2D.FreezePosition;
         GetComponent<PlayerMovement>().IsFreeze = true; 
         gameOver.SetActive(true);

@@ -64,9 +64,15 @@ public class CharacterController2D : MonoBehaviour
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
+		}	
+	}
+	public void Update()
+	{
+		if (((Input.GetKey(KeyCode.A) && transform.localScale.x > 0) || (Input.GetKey(KeyCode.D) && transform.localScale.x < 0)) && !Player.IsFreeze)
+		{
+			transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 		}
 	}
-
 
 	public void Move(float move, bool crouch, bool jump)
 	{
