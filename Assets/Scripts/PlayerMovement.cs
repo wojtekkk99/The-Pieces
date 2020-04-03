@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 	public CharacterController2D controller;
 	public float distToGround;
 	public float runSpeed = 40f;
+	public Animator Boy_animation;
 
 	float horizontalMove = 0f;
 	bool jump = false;
@@ -30,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
 	{
 
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+		Boy_animation.SetFloat("is_stand", Mathf.Abs(horizontalMove));
 
 		if (Input.GetKeyDown("w") && isGrounded)
 		{
