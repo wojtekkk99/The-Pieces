@@ -17,9 +17,9 @@ public class Checkpoint : MonoBehaviour
             GameObject checkpoint = new GameObject();
             checkpoint.transform.position = transform.position;
             hearts.lastCheckpoint = transform.position;
-            checkpoint.transform.Rotate(-0.7f, 0f, 26f);
             checkpoint.AddComponent<SpriteRenderer>().sprite = sprite;
-            checkpoint.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
+            checkpoint.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+            checkpoint.transform.localScale = new Vector3(0.15f, 0.15f, 0.9f);
         }
     }
 }

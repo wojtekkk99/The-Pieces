@@ -15,10 +15,12 @@ public class PlayerMovement : MonoBehaviour
 	Rigidbody2D rgd;
 	public GameObject animator;
 	public bool IsFreeze = false;
+	public GameObject gameOver;
 	void Start()
 	{
 		rgd = GetComponent<Rigidbody2D>();
 		animator.gameObject.SetActive(false);
+		gameOver.SetActive(false);
 	}
 
 	// Update is called once per frame

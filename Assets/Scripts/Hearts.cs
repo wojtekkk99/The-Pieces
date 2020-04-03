@@ -11,6 +11,7 @@ public class Hearts : MonoBehaviour
     public Image[] hearts;
     public Rigidbody2D rigid;
     public Sprite OneHeart;
+    public GameObject gameOver;
 
     void Start()
     {
@@ -39,7 +40,12 @@ public class Hearts : MonoBehaviour
     
     public void Die()
     {
+        health = 3;
         rigid.constraints = RigidbodyConstraints2D.FreezePosition;
-        GetComponent<PlayerMovement>().IsFreeze = true;
+        GetComponent<PlayerMovement>().IsFreeze = true; 
+        gameOver.SetActive(true);
+        gameOver.GetComponent<Animator>().Play("GameOverDark");
     }
+
+  
 }
