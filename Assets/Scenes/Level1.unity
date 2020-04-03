@@ -813,6 +813,7 @@ GameObject:
   - component: {fileID: 429909550}
   - component: {fileID: 429909557}
   - component: {fileID: 429909558}
+  - component: {fileID: 429909559}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -836,6 +837,7 @@ MonoBehaviour:
   controller: {fileID: 429909556}
   distToGround: 0
   runSpeed: 40
+  Boy_animation: {fileID: 429909559}
   isGrounded: 1
   animator: {fileID: 8545859062491766100}
   IsFreeze: 0
@@ -1036,6 +1038,25 @@ MonoBehaviour:
   other: {fileID: 34005603}
   hearts: {fileID: 429909557}
   sprite: {fileID: 21300000, guid: 07f9b5c93597dd34280648e238c9fde6, type: 3}
+--- !u!95 &429909559
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429909549}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7808ba8012a2eec4ab472d66a4602220, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &440741905
 PrefabInstance:
   m_ObjectHideFlags: 0
