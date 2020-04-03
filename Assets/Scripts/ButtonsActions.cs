@@ -17,6 +17,7 @@ public class ButtonsActions : MonoBehaviour
     public void afterResume()
     {
         player.IsFreeze = false;
+        player.GetComponent<Animator>().enabled = true;
         animator.gameObject.SetActive(false);
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;

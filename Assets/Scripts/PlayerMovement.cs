@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Escape) && IsPaused == false)
 		{
+			GetComponent<Animator>().enabled = false;
 			animator.SetActive(true);
 			animator.GetComponent<Animator>().Play("ShowPause");
 			rgd.constraints = RigidbodyConstraints2D.FreezePosition;
@@ -49,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
 		if(Input.GetKey(KeyCode.Escape) && IsPaused == true)
 		{
 			IsPaused = false;
+			GetComponent<Animator>().enabled = true;
 			pauseScreen.GetComponent<ButtonsActions>().resumePressed();
 		}
 	}
