@@ -10,7 +10,7 @@ public class Checkpoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && other.score != 0)
+        if(Input.GetKeyDown(KeyCode.Space) && other.score != 0)
         {
             other.score -= 1;
             other.uploadGui();
