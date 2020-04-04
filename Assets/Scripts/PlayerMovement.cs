@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 	public GameObject gameOver;
 	public bool IsPaused = false;
 	public GameObject pauseScreen;
+	private AudioSource walk_sound;
 
 	public bool hasKey = false;
 
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 		rgd = GetComponent<Rigidbody2D>();
 		pauseScreen.gameObject.SetActive(false);
 		gameOver.SetActive(false);
+		walk_sound = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
@@ -35,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
 		Boy_animation.SetFloat("is_stand", Mathf.Abs(horizontalMove));
+
+		if (Mathf.Abs(horizontalMove) != 0)
+        {
+			walk_sound.Play();
+		}
 
 		if (Input.GetKeyDown("w") && isGrounded)
 		{
