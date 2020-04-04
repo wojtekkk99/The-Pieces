@@ -55,8 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Balon.cs" />
+     <Compile Include="Assets\Door.cs" />
      <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
+     <Compile Include="Assets\Scripts\Balon.cs" />
      <Compile Include="Assets\Scripts\ButtonsActions.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
@@ -78,7 +79,7 @@
      <Compile Include="Assets\Scripts\Rotatate.cs" />
      <Compile Include="Assets\Scripts\SpikesDetect.cs" />
      <Compile Include="Assets\Scripts\turnOff.cs" />
-     <Compile Include="Assets\walk_sound.cs" />
+     <Compile Include="Assets\Scripts\walk_sound.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

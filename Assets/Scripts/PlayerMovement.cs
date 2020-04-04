@@ -28,9 +28,11 @@ public class PlayerMovement : MonoBehaviour
 		pauseScreen.gameObject.SetActive(false);
 		gameOver.SetActive(false);
 		walk_sound = GetComponent<AudioSource>();
+		transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 	}
 
 	// Update is called once per frame
+
 	void Update()
 	{
 		

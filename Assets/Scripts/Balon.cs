@@ -20,7 +20,7 @@ public class Balon : MonoBehaviour
                 GetComponent<MovingPlaform>().enabled = true;
                 transform.Find("BalonKey").gameObject.SetActive(true);
                 Screen.transform.Find("Key").gameObject.SetActive(false);
-                levelChanger.FadeToNextLevel(3);
+                levelChanger.FadeToNextLevel(4);
             }
             else
             {
