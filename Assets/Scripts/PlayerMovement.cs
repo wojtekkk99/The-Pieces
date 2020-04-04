@@ -28,10 +28,16 @@ public class PlayerMovement : MonoBehaviour
 		rgd = GetComponent<Rigidbody2D>();
 		pauseScreen.gameObject.SetActive(false);
 		gameOver.SetActive(false);
+<<<<<<< HEAD
 		audio = GetComponent<AudioSource>();
+=======
+		walk_sound = GetComponent<AudioSource>();
+		transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+>>>>>>> e722bc842cac98ae5a642a3031da39ca4542ca42
 	}
 
 	// Update is called once per frame
+
 	void Update()
 	{
 		
