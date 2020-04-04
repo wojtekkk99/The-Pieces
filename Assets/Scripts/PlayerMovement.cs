@@ -32,6 +32,15 @@ public class PlayerMovement : MonoBehaviour
 		
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+		if (isGrounded)
+		{
+			Boy_animation.SetBool("is_jump", false);
+		}
+		else
+		{
+			Boy_animation.SetBool("is_jump", true);
+		}
+
 		Boy_animation.SetFloat("is_stand", Mathf.Abs(horizontalMove));
 
 		if (Input.GetKeyDown("w") && isGrounded)
