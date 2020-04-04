@@ -8,5 +8,6 @@ public class Mouse_off : MonoBehaviour
     void Update()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
