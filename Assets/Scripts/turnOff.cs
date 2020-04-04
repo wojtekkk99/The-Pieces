@@ -6,6 +6,6 @@ public class turnOff : MonoBehaviour
 {
     public void turnOf()
     {
-        this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
     }
 }

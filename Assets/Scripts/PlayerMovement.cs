@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 	public bool IsPaused = false;
 	public GameObject pauseScreen;
 
+	public bool hasKey = false;
+
 	void Start()
 	{
 		rgd = GetComponent<Rigidbody2D>();

@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Moving Platform
   - Collected
+  - Key
   layers:
   - Default
   - TransparentFX
