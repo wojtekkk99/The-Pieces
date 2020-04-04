@@ -56,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
-     <Compile Include="Assets\KeyInfo.cs" />
      <Compile Include="Assets\Scripts\ButtonsActions.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
@@ -66,6 +65,7 @@
      <Compile Include="Assets\Scripts\GoToGame.cs" />
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
      <Compile Include="Assets\Scripts\Hearts.cs" />
+     <Compile Include="Assets\Scripts\KeyInfo.cs" />
      <Compile Include="Assets\Scripts\KeyPick.cs" />
      <Compile Include="Assets\Scripts\LevelChanger.cs" />
      <Compile Include="Assets\Scripts\Mouse.cs" />
