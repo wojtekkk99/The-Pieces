@@ -39,6 +39,15 @@ public class PlayerMovement : MonoBehaviour
 			jump = true;
 		}
 
+		if (isGrounded)
+        {
+			Boy_animation.SetBool("is_jump", false);
+		}
+        else
+        {
+			Boy_animation.SetBool("is_jump", true);
+		}
+
 		if (Input.GetKeyDown(KeyCode.Escape) && IsPaused == false)
 		{
 			GetComponent<Animator>().enabled = false;
