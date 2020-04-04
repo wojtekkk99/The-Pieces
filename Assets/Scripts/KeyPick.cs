@@ -12,7 +12,7 @@ public class KeyPick : MonoBehaviour
         {
             Screen.transform.Find("Key").gameObject.SetActive(true);
             player.hasKey = true;
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }
