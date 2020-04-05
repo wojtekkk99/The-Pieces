@@ -228,5 +228,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.3161633
       objectReference: {fileID: 0}
+    - target: {fileID: 4813114729768910154, guid: 6ec0333eeb4389d4d922e3dbdd839551,
+        type: 3}
+      propertyPath: gender
+      value: XX
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec0333eeb4389d4d922e3dbdd839551, type: 3}

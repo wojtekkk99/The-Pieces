@@ -1376,6 +1376,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2f8e6eb8f8ba374e8c30a67c58b233c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &429909551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429909549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be485acfe7bfae244aa4fc8123f4c9a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &429909560
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6372,11 +6384,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthAndScore
       objectReference: {fileID: 0}
+    - target: {fileID: 3352606803676477452, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6795582647048019798, guid: 4b088e19166972c4eb67d8a790edf02a,
         type: 3}
       propertyPath: m_TagString
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 8802200392336136397, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 96f7b15f660ff924d96115934e49151c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b088e19166972c4eb67d8a790edf02a, type: 3}
 --- !u!1001 &2535568773035562549
@@ -6621,6 +6644,11 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 1103619166}
+    - target: {fileID: 4241805776579486402, guid: 6ec0333eeb4389d4d922e3dbdd839551,
+        type: 3}
+      propertyPath: score
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4813114729768910154, guid: 6ec0333eeb4389d4d922e3dbdd839551,
         type: 3}
       propertyPath: gameOver
@@ -6659,7 +6687,12 @@ PrefabInstance:
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 429909550}
+      objectReference: {fileID: 429909549}
+    - target: {fileID: 5143809101783216694, guid: 9b4f2d360702cc44db2ea2ffa1a87c2b,
+        type: 3}
+      propertyPath: nexLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5143809101783216695, guid: 9b4f2d360702cc44db2ea2ffa1a87c2b,
         type: 3}
       propertyPath: m_Name
@@ -6799,6 +6832,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 429909550}
+    - target: {fileID: 6927686880252213151, guid: 91f8f447737df0b479c3925f2ce85e7d,
+        type: 3}
+      propertyPath: KeyType
+      value: KeyToGive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f8f447737df0b479c3925f2ce85e7d, type: 3}
 --- !u!1001 &7689495252483321009
@@ -6887,6 +6925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PauseScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030682231865733605, guid: 0bc56c2b368f0a84ebde85f7a35a7a09,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2549973326025541503, guid: 0bc56c2b368f0a84ebde85f7a35a7a09,
         type: 3}

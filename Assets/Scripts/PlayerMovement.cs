@@ -28,7 +28,15 @@ public class PlayerMovement : MonoBehaviour
 		pauseScreen.gameObject.SetActive(false);
 		gameOver.SetActive(false);
 		walk_sound = GetComponent<AudioSource>();
-		transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+		if (gender == "XX")
+		{
+			transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+		}
+
+		GetComponent<HealthScore>().LoadPlayerBoy();
+		GetComponent<Hearts>().health = GetComponent<HealthScore>().health;
+		transform.Find("CellingCheck").gameObject.GetComponent<PlayerCollect>().score = GetComponent<HealthScore>().score;
+		transform.Find("CellingCheck").gameObject.GetComponent<PlayerCollect>().uploadGui();
 	}
 
 	// Update is called once per frame
