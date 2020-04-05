@@ -15,9 +15,9 @@ public class Door : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (player.hasKey)
+            if (player.hasPickKey)
             {
-                player.hasKey = false;
+                player.hasPickKey = false;
                 Screen.transform.Find("Key").gameObject.SetActive(false);
                 GetComponent<Animator>().Play("OpenDoor");
             }

@@ -16,7 +16,7 @@ public class Balon : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            if (Player.GetComponent<PlayerMovement>().hasKey == true)
+            if (Player.GetComponent<PlayerMovement>().hasGiveKey == true)
             {
                 GetComponent<MovingPlaform>().enabled = true;
                 transform.Find("BalonKey").gameObject.SetActive(true);

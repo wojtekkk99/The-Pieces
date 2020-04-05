@@ -5,6 +5,7 @@ public class LevelChanger : MonoBehaviour
 {
     int sceneToLoad;
     public Animator animator;
+
     public void FadeToNextLevel(int scene)
     {
         sceneToLoad = scene;

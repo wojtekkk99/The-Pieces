@@ -16,14 +16,14 @@ public class KeyPick : MonoBehaviour
                 Screen.transform.Find("Key").gameObject.SetActive(true);
                 Screen.transform.Find("Key").transform.Find("KeyToPick").gameObject.SetActive(true);
                 Screen.transform.Find("Key").transform.Find("KeyToGive").gameObject.SetActive(false);
+                player.hasPickKey = true;
             } else
             {
                 Screen.transform.Find("Key").gameObject.SetActive(true);
                 Screen.transform.Find("Key").transform.Find("KeyToPick").gameObject.SetActive(false);
                 Screen.transform.Find("Key").transform.Find("KeyToGive").gameObject.SetActive(true);
-            }
-
-            player.hasKey = true;
+                player.hasGiveKey = true;
+            }    
             Destroy(gameObject);
         }
     }

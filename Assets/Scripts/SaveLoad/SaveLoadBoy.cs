@@ -52,5 +52,37 @@ public static class SaveLoadBoy
     {
         File.Delete(Application.persistentDataPath + "/saves.boy");
         File.Delete(Application.persistentDataPath + "/saves.girl");
+        File.Delete(Application.persistentDataPath + "/saves.level");
+    }
+
+    public static void SaveGameLevel(LevelNumber number)
+    {
+        string path = Application.persistentDataPath + "/saves.level";
+        BinaryFormatter formatter = new BinaryFormatter();
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        SaveLevel data = new SaveLevel(number);
+
+        formatter.Serialize(stream, data);
+
+        stream.Close();
+    }
+ 
+    public static SaveLevel LoadGameLevel()
+    {
+        string path = Application.persistentDataPath + "/saves.level";
+
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+            SaveLevel data = formatter.Deserialize(stream) as SaveLevel;
+
+            stream.Close();
+
+            return data;
+        }
+        else
+            return null;
     }
 }

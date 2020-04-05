@@ -16,5 +16,4 @@ public class QuitScript : MonoBehaviour
     {
         SaveLoadBoy.Delete();
     }
-
 }

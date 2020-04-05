@@ -9,13 +9,13 @@ public class ButtonsActions : MonoBehaviour
     // Start is called before the first frame update
     public LevelChanger change;
     public void resumePressed()
-    {
-        player.IsPaused = false;
+    {   
         animator.SetTrigger("ResumeGame");
     }
 
     public void afterResume()
     {
+        player.IsPaused = false;
         player.IsFreeze = false;
         player.GetComponent<Animator>().enabled = true;
         animator.gameObject.SetActive(false);

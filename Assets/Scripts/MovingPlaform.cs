@@ -6,7 +6,7 @@ public class MovingPlaform : MonoBehaviour
 {
     // Start is called before the first frame update
     private Vector3 begin;
-    bool moveUp;
+    public bool moveUp;
     public Transform target;
     public float moveSpeed = 3f;
     void Start()

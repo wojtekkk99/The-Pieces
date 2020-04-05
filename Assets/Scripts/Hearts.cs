@@ -40,6 +40,8 @@ public class Hearts : MonoBehaviour
     
     public void Die()
     {
+        GetComponent<PlayerMovement>().isDead = true;
+        GetComponent<PlayerMovement>().IsPaused = true;
         rigid.constraints = RigidbodyConstraints2D.FreezePosition;
         GetComponent<PlayerMovement>().IsFreeze = true;
         GetComponent<Animator>().enabled = false;

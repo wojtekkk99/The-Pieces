@@ -2529,19 +2529,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 861634647}
-        m_MethodName: FadeToNextLevel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1481018134}
-        m_MethodName: newGame
+      - m_Target: {fileID: 7772331815050562340}
+        m_MethodName: LoadLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2996,3 +2985,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae3e296159f4f8b49a0611c3dbe8fe8a, type: 3}
+--- !u!114 &7772331815050562340 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6105587790486069077, guid: ae3e296159f4f8b49a0611c3dbe8fe8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7772331815050562339}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0616573d40970b84c958795957b06209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

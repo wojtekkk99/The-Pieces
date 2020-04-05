@@ -20,8 +20,10 @@ public class PlayerMovement : MonoBehaviour
 	public GameObject pauseScreen;
 	private AudioSource walk_sound;
 
-	public bool hasKey = false;
+	public bool hasPickKey = false;
+	public bool hasGiveKey = false;
 
+	public bool isDead = false;
 	void Start()
 	{
 		rgd = GetComponent<Rigidbody2D>();
@@ -67,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 			Boy_animation.SetBool("is_jump", true);
 		}
 
-		if (Input.GetKeyDown(KeyCode.Escape) && IsPaused == false)
+		if (Input.GetKeyDown(KeyCode.Escape) && IsPaused == false && !isDead)
 		{
 			GetComponent<Animator>().enabled = false;
 			pauseScreen.SetActive(true);
@@ -75,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 			rgd.constraints = RigidbodyConstraints2D.FreezePosition;
 			IsFreeze = true;
 		}
-		if(Input.GetKey(KeyCode.Escape) && IsPaused == true)
+		if(Input.GetKey(KeyCode.Escape) && IsPaused == true && !isDead)
 		{
 			IsPaused = false;
 			GetComponent<Animator>().enabled = true;
