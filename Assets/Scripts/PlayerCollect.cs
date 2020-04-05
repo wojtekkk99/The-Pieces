@@ -24,8 +24,13 @@ public class PlayerCollect : MonoBehaviour
             text.text = "X " + score;
             elem_sound.Play();
         }
+        if (other.transform.tag == "Key")
+        {
+            elem_sound.Play();
+        }
     }
 
+   
     public void uploadGui()
     {
         text.text = "X " + score;

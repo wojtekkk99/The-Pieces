@@ -7,14 +7,7 @@ public class KeyPick : MonoBehaviour
     public GameObject Screen;
     public PlayerMovement player;
     public string KeyType;
-    public AudioSource audio;
-
-    void Start()
-    {
-        audio = GetComponent<AudioSource>();
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -31,7 +24,6 @@ public class KeyPick : MonoBehaviour
                 Screen.transform.Find("Key").transform.Find("KeyToGive").gameObject.SetActive(true);
                 player.hasGiveKey = true;
             }
-            audio.Play();
             Destroy(gameObject);
         }
     }
