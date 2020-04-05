@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
 		Boy_animation.SetFloat("is_stand", Mathf.Abs(horizontalMove));
 
-		if (Mathf.Abs(horizontalMove) != 0)
+		if (Mathf.Abs(horizontalMove) != 0 && !walk_sound.isPlaying)
         {
 			walk_sound.Play();
 		}

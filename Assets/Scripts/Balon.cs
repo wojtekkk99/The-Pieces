@@ -8,13 +8,16 @@ public class Balon : MonoBehaviour
     public GameObject Screen;
     public GameObject Player;
     public int nexLevel;
+    public AudioSource audio;
     void Start()
     {
         GetComponent<MovingPlaform>().enabled = false;
+        audio = GetComponent<AudioSource>();
     }
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
+            audio.Play();
         {
             if (Player.GetComponent<PlayerMovement>().hasGiveKey == true)
             {
