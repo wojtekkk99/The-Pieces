@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public PlayerMovement player;
+    public GameObject Screen;
     public void Destroy()
     {
         Destroy(gameObject);
@@ -17,6 +18,7 @@ public class Door : MonoBehaviour
             if (player.hasKey)
             {
                 player.hasKey = false;
+                Screen.transform.Find("Key").gameObject.SetActive(false);
                 GetComponent<Animator>().Play("OpenDoor");
             }
         }

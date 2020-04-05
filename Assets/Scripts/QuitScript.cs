@@ -12,4 +12,9 @@ public class QuitScript : MonoBehaviour
         animationQuit.Play("Fade_out_quit");
     }
 
+    public void newGame()
+    {
+        SaveLoadBoy.Delete();
+    }
+
 }

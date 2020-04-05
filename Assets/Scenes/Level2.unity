@@ -672,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 6927686880252213138, guid: 91f8f447737df0b479c3925f2ce85e7d,
         type: 3}
       propertyPath: m_Name
-      value: Key Pick
+      value: Key Give
       objectReference: {fileID: 0}
     - target: {fileID: 6927686880252213151, guid: 91f8f447737df0b479c3925f2ce85e7d,
         type: 3}
@@ -684,6 +684,11 @@ PrefabInstance:
       propertyPath: Screen
       value: 
       objectReference: {fileID: 780681279}
+    - target: {fileID: 6927686880252213151, guid: 91f8f447737df0b479c3925f2ce85e7d,
+        type: 3}
+      propertyPath: KeyType
+      value: KeyToGive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f8f447737df0b479c3925f2ce85e7d, type: 3}
 --- !u!4 &181367341 stripped
@@ -1535,6 +1540,42 @@ PrefabInstance:
       value: HealthAndScore
       objectReference: {fileID: 0}
     - target: {fileID: 3352606803676477452, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 96f7b15f660ff924d96115934e49151c,
+        type: 3}
+    - target: {fileID: 6795582647048019798, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981469398037032362, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981469398037032362, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981469398037032362, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981469398037032362, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981469398037032362, guid: 4b088e19166972c4eb67d8a790edf02a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8802200392336136397, guid: 4b088e19166972c4eb67d8a790edf02a,
         type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2477,7 +2518,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0f2df13ad3053974fb9ece4d9d189c44,
+      objectReference: {fileID: 21300000, guid: 96f7b15f660ff924d96115934e49151c,
         type: 3}
     - target: {fileID: 6927686880252213137, guid: 91f8f447737df0b479c3925f2ce85e7d,
         type: 3}
@@ -2549,6 +2590,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 357871463}
+    - target: {fileID: 6927686880252213151, guid: 91f8f447737df0b479c3925f2ce85e7d,
+        type: 3}
+      propertyPath: KeyType
+      value: KeyToPick
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f8f447737df0b479c3925f2ce85e7d, type: 3}
 --- !u!4 &702960938 stripped
@@ -4360,7 +4406,12 @@ PrefabInstance:
         type: 3}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 357871463}
+      objectReference: {fileID: 357871462}
+    - target: {fileID: 5143809101783216694, guid: 9b4f2d360702cc44db2ea2ffa1a87c2b,
+        type: 3}
+      propertyPath: nexLevel
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5143809101783216695, guid: 9b4f2d360702cc44db2ea2ffa1a87c2b,
         type: 3}
       propertyPath: m_Name
@@ -4649,6 +4700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 357871463}
+  Screen: {fileID: 780681279}
 --- !u!61 &1515332420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6096,7 +6148,7 @@ PrefabInstance:
     - target: {fileID: 7758928270423324198, guid: 903664fc4924aff4ca6a2102b9c7ed3b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.04
+      value: -4.73
       objectReference: {fileID: 0}
     - target: {fileID: 7758928270423324198, guid: 903664fc4924aff4ca6a2102b9c7ed3b,
         type: 3}

@@ -6,7 +6,8 @@ public class Balon : MonoBehaviour
 {
     public LevelChanger levelChanger;
     public GameObject Screen;
-    public PlayerMovement Player;
+    public GameObject Player;
+    public int nexLevel;
     void Start()
     {
         GetComponent<MovingPlaform>().enabled = false;
@@ -15,12 +16,13 @@ public class Balon : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            if (Player.hasKey == true)
+            if (Player.GetComponent<PlayerMovement>().hasKey == true)
             {
                 GetComponent<MovingPlaform>().enabled = true;
                 transform.Find("BalonKey").gameObject.SetActive(true);
                 Screen.transform.Find("Key").gameObject.SetActive(false);
-                levelChanger.FadeToNextLevel(4);
+                Player.GetComponent<HealthScore>().SavePlayerBoy();
+                levelChanger.FadeToNextLevel(nexLevel);
             }
             else
             {
