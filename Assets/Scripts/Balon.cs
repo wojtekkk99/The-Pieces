@@ -8,6 +8,7 @@ public class Balon : MonoBehaviour
     public GameObject Screen;
     public GameObject Player;
     public int nexLevel;
+    public bool isDoor = false;
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -25,8 +26,11 @@ public class Balon : MonoBehaviour
             }
             else
             {
-                transform.Find("ErrorInfo").gameObject.SetActive(true);
-                GetComponent<Animator>().Play("ErrorMessage");
+                if (!isDoor)
+                {
+                    transform.Find("ErrorInfo").gameObject.SetActive(true);
+                    GetComponent<Animator>().Play("ErrorMessage");
+                }
             }
         }
     }
