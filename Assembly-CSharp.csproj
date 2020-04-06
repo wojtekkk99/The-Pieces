@@ -82,6 +82,7 @@
      <Compile Include="Assets\Scripts\SaveLoad\PlayerDataBoy.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\SaveLevel.cs" />
      <Compile Include="Assets\Scripts\SaveLoad\SaveLoadBoy.cs" />
+     <Compile Include="Assets\Scripts\SettingsMenu.cs" />
      <Compile Include="Assets\Scripts\SpikesDetect.cs" />
      <Compile Include="Assets\Scripts\playerTrigger.cs" />
      <Compile Include="Assets\Scripts\turnOff.cs" />
