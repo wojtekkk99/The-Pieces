@@ -88,6 +88,8 @@
      <Compile Include="Assets\Scripts\playerTrigger.cs" />
      <Compile Include="Assets\Scripts\turnOff.cs" />
      <Compile Include="Assets\Scripts\walk_sound.cs" />
+     <Compile Include="Assets\backToMenu.cs" />
+     <Compile Include="Assets\finish.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
