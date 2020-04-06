@@ -5,11 +5,11 @@ using UnityEngine;
 public class SpikesDetect : MonoBehaviour
 {
     GameObject Player;
-    public AudioSource audio;
+    public AudioSource hited;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        audio = GetComponent<AudioSource>();
+        hited = GetComponent<AudioSource>();
     }
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,12 +19,12 @@ public class SpikesDetect : MonoBehaviour
             if (Player.GetComponent<Hearts>().health == 0)
             {
                 Player.GetComponent<Hearts>().Die();
-                audio.Play();
+                hited.Play();
             }
             else
             {
                 Player.transform.position = Player.gameObject.GetComponent<Hearts>().lastCheckpoint;
-                audio.Play();
+                hited.Play();
             }
         }
     }

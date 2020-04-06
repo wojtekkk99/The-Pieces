@@ -30,7 +30,7 @@ public class ButtonsActions : MonoBehaviour
     }
 
     public void restartPressed()
-    {
+    {      
         animator.SetTrigger("ResumeGame");
         change.GetComponent<LevelChanger>().FadeToNextLevel(SceneManager.GetActiveScene().buildIndex);
     }

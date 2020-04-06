@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5143809101783216697}
   m_Layer: 0
   m_Name: Balon
-  m_TagString: Untagged
+  m_TagString: Balon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b04826f754cd764ebadce9015bf8ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveUp: 0
   target: {fileID: 0}
   moveSpeed: 3
 --- !u!61 &5143809101783216693
@@ -142,6 +143,7 @@ MonoBehaviour:
   levelChanger: {fileID: 0}
   Screen: {fileID: 0}
   Player: {fileID: 0}
+  nexLevel: 0
 --- !u!95 &5143809101783216697
 Animator:
   serializedVersion: 3

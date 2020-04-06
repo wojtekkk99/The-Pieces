@@ -6,6 +6,8 @@ public class Door : MonoBehaviour
 {
     public PlayerMovement player;
     public GameObject Screen;
+
+    public bool lastDoor = false;
     public void Destroy()
     {
         Destroy(gameObject);
@@ -15,7 +17,7 @@ public class Door : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (player.hasPickKey)
+            if (player.hasPickKey || (player.hasGiveKey && lastDoor))
             {
                 player.hasPickKey = false;
                 Screen.transform.Find("Key").gameObject.SetActive(false);

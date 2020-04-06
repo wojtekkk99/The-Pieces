@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public GameObject Heart;
+    public GameObject player;
     public void restartPressed()
     {
+        player.GetComponent<HealthScore>().health = 3;
+        player.GetComponent<HealthScore>().SavePlayerBoy();
         GetComponent<Animator>().Play("GameOverReset");  
     }
     public void resetLoad()
@@ -26,6 +28,6 @@ public class GameOver : MonoBehaviour
     }
     public void maxHealth()
     {
-        Heart.GetComponent<Hearts>().health = 3;
+        player.GetComponent<Hearts>().health = 3;
     }
 }

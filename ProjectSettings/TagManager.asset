@@ -10,6 +10,7 @@ TagManager:
   - Moving Platform
   - Collected
   - Key
+  - Balon
   layers:
   - Default
   - TransparentFX

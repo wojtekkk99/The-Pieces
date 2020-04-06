@@ -45,7 +45,13 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update()
 	{
-		
+		if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
+		{
+			GetComponent<CharacterController2D>().enabled = false;
+		}
+		else 
+			GetComponent<CharacterController2D>().enabled = true;
+
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
 		Boy_animation.SetFloat("is_stand", Mathf.Abs(horizontalMove));
@@ -81,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			IsPaused = false;
 			GetComponent<Animator>().enabled = true;
-			pauseScreen.GetComponent<ButtonsActions>().resumePressed();
+			pauseScreen.GetComponent<ButtonsActions>().resumePressed();	
 		}
 	}
 

@@ -14,8 +14,11 @@ public class Balon : MonoBehaviour
         {
             if (Player.GetComponent<PlayerMovement>().hasGiveKey == true)
             {
-                GetComponent<MovingPlaform>().enabled = true;
-                transform.Find("BalonKey").gameObject.SetActive(true);
+                if (this.gameObject.tag == "Balon")
+                {
+                    GetComponent<MovingPlaform>().enabled = true;
+                    transform.Find("BalonKey").gameObject.SetActive(true);
+                }
                 Screen.transform.Find("Key").gameObject.SetActive(false);
                 Player.GetComponent<HealthScore>().SavePlayerBoy();
                 levelChanger.FadeToNextLevel(nexLevel);
