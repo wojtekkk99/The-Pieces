@@ -7,6 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1258377326391136159, guid: 6ec0333eeb4389d4d922e3dbdd839551,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: e60b51a90708296438048107077c8f89,
+        type: 2}
     - target: {fileID: 4241805776435543446, guid: 6ec0333eeb4389d4d922e3dbdd839551,
         type: 3}
       propertyPath: m_Offset.x
