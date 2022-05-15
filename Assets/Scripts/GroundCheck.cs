@@ -9,7 +9,7 @@ public class GroundCheck : MonoBehaviour
     {
 		player = transform.parent.gameObject.GetComponent<PlayerMovement>();
     }
-	void OnCollisionEnter2D(Collision2D other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Moving Platform")
 		{
@@ -22,7 +22,7 @@ public class GroundCheck : MonoBehaviour
 		}
 
 	}
-	void OnCollisionExit2D(Collision2D other)
+	void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Moving Platform")
 		{
