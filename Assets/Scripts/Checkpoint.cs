@@ -7,10 +7,10 @@ public class Checkpoint : MonoBehaviour
     public PlayerCollect other;
     public Hearts hearts;
     public Sprite sprite;
-    // Update is called once per frame
-    void Update()
+
+    public void SetCheckpoint()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && other.score != 0)
+        if(other.score != 0)
         {
             other.score -= 1;
             other.uploadGui();

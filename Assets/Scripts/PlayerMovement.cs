@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 	public bool hasGiveKey = false;
 
 	public bool isDead = false;
+
+	public Joystick joystick;
 	void Start()
 	{
 		rgd = GetComponent<Rigidbody2D>();
@@ -43,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
 	// Update is called once per frame
 
+
+
 	void Update()
 	{
 		if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
@@ -52,18 +56,19 @@ public class PlayerMovement : MonoBehaviour
 		else 
 			GetComponent<CharacterController2D>().enabled = true;
 
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
+		if (joystick.Horizontal >= .2f) {
+			horizontalMove = runSpeed;
+		} else if (joystick.Horizontal <= -.2f) {
+			horizontalMove = -runSpeed;
+		} else {
+			horizontalMove = 0f;
+		}
+		
 		Boy_animation.SetFloat("is_stand", Mathf.Abs(horizontalMove));
 
 		if (Mathf.Abs(horizontalMove) != 0 && !walk_sound.isPlaying && isGrounded)
         {
 			walk_sound.Play();
-		}
-
-		if (Input.GetKeyDown("w") && isGrounded)
-		{
-			jump = true;
 		}
 
 		if (isGrounded)
@@ -74,21 +79,6 @@ public class PlayerMovement : MonoBehaviour
         {
 			Boy_animation.SetBool("is_jump", true);
 		}
-
-		if (Input.GetKeyDown(KeyCode.Escape) && IsPaused == false && !isDead)
-		{
-			GetComponent<Animator>().enabled = false;
-			pauseScreen.SetActive(true);
-			pauseScreen.GetComponent<Animator>().Play("ShowPause");
-			rgd.constraints = RigidbodyConstraints2D.FreezePosition;
-			IsFreeze = true;
-		}
-		if(Input.GetKey(KeyCode.Escape) && IsPaused == true && !isDead)
-		{
-			IsPaused = false;
-			GetComponent<Animator>().enabled = true;
-			pauseScreen.GetComponent<ButtonsActions>().resumePressed();	
-		}
 	}
 
 	void FixedUpdate()
@@ -96,5 +86,31 @@ public class PlayerMovement : MonoBehaviour
 		// Move our character
 		controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
 		jump = false;
+	}
+
+	public void Pause() {
+		if (IsPaused == false && !isDead)
+		{
+			GetComponent<Animator>().enabled = false;
+			pauseScreen.SetActive(true);
+			pauseScreen.GetComponent<Animator>().Play("ShowPause");
+			rgd.constraints = RigidbodyConstraints2D.FreezePosition;
+			IsFreeze = true;
+			joystick.enabled = false;
+		}
+		if(IsPaused == true && !isDead)
+		{
+			IsPaused = false;
+			joystick.enabled = true;
+			GetComponent<Animator>().enabled = true;
+			pauseScreen.GetComponent<ButtonsActions>().resumePressed();	
+		}
+	}
+
+	public void Jump() {
+		if (isGrounded)
+		{
+			jump = true;
+		}
 	}
 }

@@ -7,10 +7,11 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     public GameObject Player;
 
-    private Vector3 offset;
+    private Vector3 offset; 
     void Start()
     {
         offset = transform.position - Player.transform.position;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
     // Update is called once per frame
